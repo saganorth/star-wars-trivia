@@ -16,6 +16,9 @@ $body-font: 'Roboto', sans-serif;
 }
 
 body {
+  background-image: url('https://www.wallpapertip.com/wmimgs/197-1971126_star-wars-space-wallpaper-hd.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: $background-color;
   color: $text-color;
   font-family: $body-font;
@@ -110,176 +113,55 @@ form {
   }
 }
 
-#lowerSection {
+.character-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 
-  #profileCards {
+  .characterCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
-    gap: 20px;
+    background-color: $secondary-color;
+    padding: 20px;
 
     .card {
-      background-color: $secondary-color;
-      color: $text-color;
-      font-family: $body-font;
-      font-size: 16px;
-      border-radius: 10px;
+      margin: 20px;
       padding: 20px;
-      box-shadow: 4px 4px $primary-color;
-      text-shadow: 2px 2px $primary-color;
+      background-color: $background-color;
+      box-shadow: 0px 0;
 
-     h3{ 
-      font-family: $heading-font;
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-align: center;
-      text-shadow: 2px 2px $primary-color;
-      }
-      
-      p {
-      margin-bottom: 10px;
-      }
-      
-      ul {
-      list-style: none;
-      margin-bottom: 10px;
-      
-      
-      li {
-        margin-bottom: 5px;
-        text-shadow: 2px 2px $primary-color;
-      }
-      }
-      
-      button {
-      background-color: $primary-color;
-      border: none;
-      color: $text-color;
-      font-family: $heading-font;
-      font-size: 18px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-shadow: 2px 2px $secondary-color;
-      margin-top: 10px;
-      
-      
-    
-      &:hover {
-        cursor: pointer;
-        background-color: darken($primary-color, 10%);
-      }
-      
-      &:active {
-        transform: translateY(2px);
-      }
-      }
-      
       img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
+        width: 100%;
+        height: 300px; /* set a specific height */
+        margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .character-section {
+    .characterCards {
+      padding: 40px;
+
+      .card {
+        width: 400px;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .character-section {
+    .characterCards {
+      padding: 80px;
+
+      .card {
+        width: 500px;
       }
-      
-      #showMore {
-      margin-top: 20px;
-      
-      button {
-      background-color: $primary-color;
-      border: none;
-      color: $text-color;
-      font-family: $heading-font;
-      font-size: 18px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-shadow: 2px 2px $secondary-color;
-      
-      css
-      Copy code
-      &:hover {
-        cursor: pointer;
-        background-color: darken($primary-color, 10%);
-      }
-      
-      &:active {
-        transform: translateY(2px);
-      }
-      }
-      }
-      
-      #extraInfo {
-      margin-top: 50px;
-      
-      p {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      text-shadow: 2px 2px $secondary-color;
-      }
-      }
-      
-      // Star Wars theme colors
-      $primary-color: #FFD700; // gold
-      $secondary-color: #000000; // black
-      $text-color: #FFFFFF; // white
-      $background-color: #2d2d2d; // dark gray
-      
-      // Star Wars font
-      $heading-font: 'Star Jedi', sans-serif;
-      $body-font: 'Roboto', sans-serif;
-      
-      // Add Star Wars image to background
-      body {
-      background-image: url('https://www.wallpapertip.com/wmimgs/197-1971126_star-wars-space-wallpaper-hd.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      }
-      
-      // Adjust text colors to be more legible against the background image
-      h2, #alert p, .card h3 {
-      color: $primary-color;
-      }
-      
-      option, #showbutton, button {
-      color: $text-color;
-      }
-      
-      #alert {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 20px;
-      }
-      
-      // Style select dropdowns to match lightsaber colors
-      select {
-        border-bottom: 5px solid $primary-color;
-        }
-        
-        option[value="Luke Skywalker"] {
-        color: #1434a4; // blue
-        }
-        
-        option[value="R2-D2"] {
-        color: #7d7d7d; // silver
-        }
-        
-        option[value="C-3PO"] {
-        color: #c69318; // gold
-        }
-        
-        option[value="Leia Organa"] {
-        color: #b31b1b; // red
-        }
-      }
-}  
-      
-      
-      
-      
-      
-      
+    }
+  }
+}
+
+  
