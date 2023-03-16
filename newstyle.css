@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #2d2d2d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+form div select {
+  background-color: #2d2d2d;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 20px;
+  text-shadow: 2px 2px #ffd700;
+}
+form div select option {
+  background-color: #2d2d2d;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 20px;
+  text-shadow: 2px 2px #ffd700;
+}
+form div select option:hover {
+  background-color: #ffd700;
+  cursor: pointer;
+}
+form div select:focus {
+  outline: none;
+}
+form button {
+  background-color: #ffd700;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-shadow: 2px 2px #2d2d2d;
+  margin-top: 20px;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: #ccac00;
+}
+form button:active {
+  transform: translateY(2px);
+}
+
+#alert {
+  text-align: center;
+  margin-top: 50px;
+}
+#alert p {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px #2d2d2d;
+}
+
+#lowerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#lowerSection #profileCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+#lowerSection #profileCards .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 4px 4px #ffd700;
+  text-shadow: 2px 2px #ffd700;
+}
+#lowerSection #profileCards .card h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px #ffd700;
+}
+#lowerSection #profileCards .card p {
+  margin-bottom: 10px;
+}
+#lowerSection #profileCards .card ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
+#lowerSection #profileCards .card ul li {
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #ffd700;
+}
+#lowerSection #profileCards .card button {
+  background-color: #ffd700;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-shadow: 2px 2px #2d2d2d;
+  margin-top: 10px;
+}
+#lowerSection #profileCards .card button:hover {
+  cursor: pointer;
+  background-color: #ccac00;
+}
+#lowerSection #profileCards .card button:active {
+  transform: translateY(2px);
+}
+#lowerSection #profileCards .card img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+#lowerSection #profileCards #showMore {
+  margin-top: 20px;
+}
+#lowerSection #profileCards #showMore button {
+  background-color: #ffd700;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-shadow: 2px 2px #2d2d2d;
+}
+css Copy code #lowerSection #profileCards #showMore button:hover {
+  cursor: pointer;
+  background-color: #ccac00;
+}
+#lowerSection #profileCards #showMore button:active {
+  transform: translateY(2px);
+}
+#lowerSection #profileCards #extraInfo {
+  margin-top: 50px;
+}
+#lowerSection #profileCards #extraInfo p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px #2d2d2d;
+}
+#lowerSection #profileCards body {
+  background-image: url("https://www.wallpapertip.com/wmimgs/197-1971126_star-wars-space-wallpaper-hd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#lowerSection #profileCards h2, #lowerSection #profileCards #alert p, #lowerSection #profileCards .card h3 {
+  color: #FFD700;
+}
+#lowerSection #profileCards option, #lowerSection #profileCards #showbutton, #lowerSection #profileCards button {
+  color: #FFFFFF;
+}
+#lowerSection #profileCards #alert {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+#lowerSection #profileCards select {
+  border-bottom: 5px solid #FFD700;
+}
+#lowerSection #profileCards option[value="Luke Skywalker"] {
+  color: #1434a4;
+}
+#lowerSection #profileCards option[value=R2-D2] {
+  color: #7d7d7d;
+}
+#lowerSection #profileCards option[value=C-3PO] {
+  color: #c69318;
+}
+#lowerSection #profileCards option[value="Leia Organa"] {
+  color: #b31b1b;
+}/*# sourceMappingURL=newstyle.css.map */
