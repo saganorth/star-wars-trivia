@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars API</title>
+    <link rel="stylesheet" href="newstyle.css" />
+    
+  </head>
+  <body>
+    
+      <h2>Compare your Star wars characters</h2>
+
+      <form id="selectForm">
+        
+        <div>
+          <select name="characterList1" id="picker">
+            <option value="0" disabled selected>Character One</option>
+            <option>Luke Skywalker</option>
+            <option>R2-D2</option>
+            <option>C-3PO</option>
+            <option>Leia Organa</option>
+            <option>Darth Vader</option>
+            <option>Owen Lars</option>
+          </select>
+         
+          <select name="characterList2" id="picker">
+            <option value="0" disabled selected>Character two</option>
+            <option>Luke Skywalker</option>
+            <option>R2-D2</option>
+            <option>C-3PO</option>
+            <option>Leia Organa</option>
+            <option>Darth Vader</option>
+            <option>Owen Lars</option>
+          </select>
+        </div>
+        
+      </form>
+      <button id="showCaracters">Show Characters</button>
+      <div id="alert"></div>
+    </section>
+    <section id="character-section">
+      <div id="characterCards"></div>
+      <div id="showMore">
+        <button id="compareBtn">compare</button>
+      </div>
+      <div id="extraInfo"></div>
+    </section>
+    <script src="oh.js" defer></script>
+  </body>
+</html>
