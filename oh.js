@@ -47,7 +47,7 @@ const fetchData = async (url) => {
       alert.append(text);
     } else {
       theCharacters.push(character1, character2);
-      allCharacters(theCharacters);
+      createCharacters(theCharacters);
     }
   };
   
@@ -56,7 +56,7 @@ const fetchData = async (url) => {
     showCharacters();
   });
   
-  let getCharacther = async (id) => {
+  let loadCharacther = async (id) => {
     try {
       characterCards.innerHTML = "Loding....";
       let response = await fetchData(`https://swapi.dev/api/people?search=${id}`);
@@ -66,9 +66,9 @@ const fetchData = async (url) => {
     }
   };
   
-  let allCharacters = async (arr) => {
+  let createCharacters = async (arr) => {
     try {
-      let promises = arr.map((id) => getCharacther(id));
+      let promises = arr.map((id) => loadCharacther(id));
       let results = await Promise.all(promises);
       console.log(results);
       renderCharacters(results);
@@ -133,42 +133,69 @@ const fetchData = async (url) => {
       extraInfo.append(extraInfoDiv, compareDiv);
     });
   
-    // Create compareDiv and compare elements
-    const compareDiv = document.createElement("div");
+    let compareDiv = document.createElement("div");
     compareDiv.setAttribute("id", "compare");
-    const compare = document.createElement("ul");
-  
-    const properties = [
-      "gender",
-      "height",
-      "mass",
-      "hairColor",
-      "skinColor",
-      "eyeColor",
-      "movies"
-    ];
-    for (const property of properties) {
-      // Create li element for each property
-      const li = document.createElement("li");
-      let message;
-  
-      // Compare the property values of each character
-      if (characterArr[0][property] === characterArr[1][property]) {
-        message = `${characterArr[0].name} has the same ${property} as ${characterArr[1].name}`;
-      } else if (characterArr[0][property] > characterArr[1][property]) {
-        message = `${characterArr[0].name} has a higher ${property} than ${characterArr[1].name}`;
-      } else {
-        message = `${characterArr[1].name} has a higher ${property} than ${characterArr[0].name}`;
-      }
-  
-      
-      li.textContent = message;
-  
-     
-      compare.appendChild(li);
+    let compare = document.createElement("ul");
+    //Gender
+    let gender = document.createElement("li");
+    if (characterArr[0].gender === characterArr[1].gender) {
+      gender.innerText = `${characterArr[0].name} has the same gender as ${characterArr[1].name}`;
+    } else {
+      gender.innerText = `${characterArr[0].name} doesn't have the same gender as ${characterArr[1].name}`;
     }
-  
-    
-    compareDiv.appendChild(compare);
+    //Height
+    let height = document.createElement("li");
+    if (characterArr[0].height > characterArr[1].height) {
+      height.innerText = `${characterArr[0].name} is taller then ${characterArr[1].name}`;
+    } else if (characterArr[0].height < characterArr[1].height) {
+      height.innerText = `${characterArr[1].name} is taller then ${characterArr[0].name}`;
+    } else {
+      height.innerText = `${characterArr[1].name} and ${characterArr[0].name} is equaly tall.`;
+    }
+    //Weight
+    let mass = document.createElement("li");
+    if (characterArr[0].mass > characterArr[1].mass) {
+      mass.innerText = `${characterArr[0].name} weighs more then ${characterArr[1].name}`;
+    } else if (characterArr[0].mass < characterArr[1].mass) {
+      mass.innerText = `${characterArr[1].name} weighs more then ${characterArr[0].name}`;
+    } else {
+      mass.innerText = `${characterArr[1].name} and ${characterArr[0].name} weights the same.`;
+    }
+    //Hair Color
+    let hair = document.createElement("li");
+    if (characterArr[0].hairColor === characterArr[1].hairColor) {
+      hair.innerText = `${characterArr[0].name} has the same hair color as ${characterArr[1].name}`;
+    } else {
+      hair.innerText = `${characterArr[0].name} doesn't have the same hair color as ${characterArr[1].name}`;
+    }
+    //Skin Color
+    let skin = document.createElement("li");
+    if (characterArr[0].skinColor === characterArr[1].skinColor) {
+      skin.innerText = `${characterArr[0].name} has the same skink color as ${characterArr[1].name}`;
+    } else {
+      skin.innerText = `${characterArr[0].name} doesn't have the same skin color as ${characterArr[1].name}`;
+    }
+    //Eye Color
+    let eye = document.createElement("li");
+    if (characterArr[0].eyeColor === characterArr[1].eyeColor) {
+      eye.innerText = `${characterArr[0].name} has the same eye color as ${characterArr[1].name}`;
+    } else {
+      eye.innerText = `${characterArr[0].name} doesn't have the same eye color as ${characterArr[1].name}`;
+    }
+    //Films
+    let movies = document.createElement("li");
+    if (characterArr[0].movies > characterArr[1].movies) {
+      movies.innerText = `${characterArr[0].name} has been in more movies then ${characterArr[1].name}`;
+    } else if (characterArr[0].movies < characterArr[1].movies) {
+      movies.innerText = `${characterArr[1].name} has been in more movies then ${characterArr[0].name}`;
+    } else {
+      movies.innerText = `${characterArr[1].name} and ${characterArr[0].name} has been in the same amount of movies.`;
+    }
+    compare.append(gender, height, mass, hair, skin, eye, movies);
+    compareDiv.append(compare);
   };
   
+
+      
+  
+    
